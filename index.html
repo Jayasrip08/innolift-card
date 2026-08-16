@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InnoLift Ventures — Business Card</title>
+  <meta name="description" content="Praveen Kumar | Founder & Managing Director, InnoLift Ventures — DPIIT Recognised Startup.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="phone">
+
+  <!-- Status bar -->
+  <div class="statusbar">
+    <span class="sb-time" id="clock">9:41</span>
+    <div class="sb-notch"></div>
+    <div class="sb-icons">
+      <i class="fa-solid fa-signal"></i>
+      <i class="fa-solid fa-wifi"></i>
+      <i class="fa-solid fa-battery-full"></i>
+    </div>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-wrap">
+
+    <!-- ── HEADER ── -->
+    <header class="hero">
+      <div class="hero-texture" aria-hidden="true"></div>
+
+      <!-- Logo circle -->
+      <div class="logo-ring-wrap">
+        <div class="logo-ring">
+          <div class="logo-inner">
+            <svg class="rocket-svg" viewBox="0 0 120 120" fill="none"
+                 xmlns="http://www.w3.org/2000/svg" aria-label="InnoLift Ventures Logo">
+              <defs>
+                <linearGradient id="silvBody" x1="10%" y1="0%" x2="90%" y2="100%">
+                  <stop offset="0%"   stop-color="#F1F5F9"/>
+                  <stop offset="45%"  stop-color="#CBD5E1"/>
+                  <stop offset="100%" stop-color="#475569"/>
+                </linearGradient>
+                <linearGradient id="flameG" x1="50%" y1="0%" x2="50%" y2="100%">
+                  <stop offset="0%"   stop-color="#FFA040"/>
+                  <stop offset="100%" stop-color="#FF4500"/>
+                </linearGradient>
+                <radialGradient id="cpGrad" cx="40%" cy="35%" r="65%">
+                  <stop offset="0%"   stop-color="#FFE5A0"/>
+                  <stop offset="100%" stop-color="#FF7A00"/>
+                </radialGradient>
+                <filter id="glow" x="-25%" y="-25%" width="150%" height="150%">
+                  <feGaussianBlur stdDeviation="2.5" result="b"/>
+                  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+              <!-- V Wings -->
+              <path d="M18 27 L60 99 L102 27 L82 27 L60 71 L38 27 Z"
+                    fill="url(#silvBody)" opacity="0.94"/>
+              <!-- Wing highlight -->
+              <path d="M18 27 L60 99 L102 27 L82 27 L60 71 L38 27 Z"
+                    fill="none" stroke="rgba(255,122,0,0.45)" stroke-width="0.7"/>
+              <!-- Rocket core -->
+              <path d="M60 12 C51 32 47 54 47 74 L60 63 L73 74 C73 54 69 32 60 12 Z"
+                    fill="url(#silvBody)"/>
+              <!-- Core shine -->
+              <path d="M60 12 C55 28 53 46 53 62 L60 55 L67 62 C67 46 65 28 60 12 Z"
+                    fill="rgba(255,255,255,0.18)"/>
+              <!-- Flame -->
+              <path d="M53 74 L60 98 L67 74 L62 80 L60 86 L58 80 Z"
+                    fill="url(#flameG)" filter="url(#glow)"/>
+              <path d="M57 76 L60 92 L63 76 L60 81 Z" fill="#FFE5A0" opacity="0.85"/>
+              <!-- Cockpit glow -->
+              <circle cx="60" cy="40" r="8.5" fill="rgba(255,140,0,0.18)" filter="url(#glow)"/>
+              <!-- Cockpit -->
+              <circle cx="60" cy="40" r="5.5" fill="url(#cpGrad)"/>
+              <circle cx="58" cy="38"  r="2"   fill="rgba(255,255,255,0.5)"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brand -->
+      <div class="brand">
+        <h1 class="brand-name">INNOLIFT</h1>
+        <div class="brand-row">
+          <span class="brand-line"></span>
+          <span class="brand-ventures">VENTURES</span>
+          <span class="brand-line"></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ── WHITE CARD ── -->
+    <section class="white-card">
+
+      <!-- Person -->
+      <div class="person">
+        <h2 class="person-name">Praveen Kumar</h2>
+        <p class="person-title">Founder &amp; Managing Director</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Contact buttons -->
+      <div class="actions">
+
+        <a href="tel:+919876543210" class="act-btn" id="btnCall">
+          <span class="act-icon"><i class="fa-solid fa-phone"></i></span>
+          <span class="act-label">Call</span>
+          <span class="act-meta">+91 98765 43210</span>
+          <i class="fa-solid fa-chevron-right act-chevron"></i>
+        </a>
+
+        <a href="https://wa.me/919876543210" target="_blank" class="act-btn" id="btnWA">
+          <span class="act-icon green"><i class="fa-brands fa-whatsapp"></i></span>
+          <span class="act-label">WhatsApp</span>
+          <span class="act-meta">Chat with us</span>
+          <i class="fa-solid fa-chevron-right act-chevron"></i>
+        </a>
+
+        <a href="mailto:contact@innoliftventures.com" class="act-btn" id="btnEmail">
+          <span class="act-icon"><i class="fa-solid fa-envelope"></i></span>
+          <span class="act-label">Email</span>
+          <span class="act-meta">contact@innoliftventures.com</span>
+          <i class="fa-solid fa-chevron-right act-chevron"></i>
+        </a>
+
+        <a href="https://innoliftventures.com" target="_blank" class="act-btn" id="btnWeb">
+          <span class="act-icon"><i class="fa-solid fa-globe"></i></span>
+          <span class="act-label">Website</span>
+          <span class="act-meta">innoliftventures.com</span>
+          <i class="fa-solid fa-chevron-right act-chevron"></i>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ── SERVICES ── -->
+    <section class="services">
+      <p class="sec-label">Specializations &amp; Programs</p>
+      <div class="chips">
+        <span class="chip">App Dev</span>
+        <span class="chip">Web Dev</span>
+        <span class="chip">AI / ML</span>
+        <span class="chip">Digital Marketing</span>
+        <span class="chip">Internships</span>
+        <span class="chip">Courses</span>
+        <span class="chip">Workshops</span>
+      </div>
+    </section>
+
+    <!-- ── CTAs ── -->
+    <div class="ctas">
+      <button class="btn-primary" onclick="saveContact()">
+        <i class="fa-solid fa-user-plus"></i> Save Contact
+      </button>
+      <button class="btn-outline" onclick="downloadBrochure()">
+        <i class="fa-solid fa-file-arrow-down"></i> Download Brochure
+      </button>
+    </div>
+
+    <!-- ── FOOTER ── -->
+    <footer class="foot">
+      <span class="foot-cert">
+        <i class="fa-solid fa-certificate foot-star"></i>
+        DPIIT Recognised Startup
+      </span>
+      <span class="foot-sep">·</span>
+      <span class="foot-loc">Chennai &amp; Erode, India</span>
+    </footer>
+
+  </div><!-- /card-wrap -->
+</div><!-- /phone -->
+
+<!-- Toast -->
+<div id="toast" class="toast hidden" role="alert">
+  <i class="fa-solid fa-circle-check"></i>
+  <span id="toastMsg">Done!</span>
+</div>
+
+<script>
+  // Live clock
+  (function tick() {
+    const d = new Date();
+    document.getElementById('clock').textContent =
+      String(d.getHours()).padStart(2,'0') + ':' + String(d.getMinutes()).padStart(2,'0');
+    setTimeout(tick, 15000);
+  })();
+
+  function saveContact() {
+    const v = `BEGIN:VCARD\nVERSION:3.0\nN:Kumar;Praveen;;;\nFN:Praveen Kumar\nORG:InnoLift Ventures\nTITLE:Founder & Managing Director\nTEL;TYPE=CELL:+919876543210\nEMAIL:contact@innoliftventures.com\nURL:https://innoliftventures.com\nNOTE:DPIIT Recognised Startup · Chennai & Erode, India\nEND:VCARD`;
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([v], {type:'text/vcard'}));
+    a.download = 'Praveen_Kumar_InnoLift.vcf';
+    a.click();
+    showToast('Contact saved to your device!');
+  }
+
+  function downloadBrochure() {
+    showToast('Brochure download starting…');
+  }
+
+  function showToast(msg) {
+    const el = document.getElementById('toast');
+    document.getElementById('toastMsg').textContent = msg;
+    el.classList.remove('hidden');
+    requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add('show')));
+    setTimeout(() => {
+      el.classList.remove('show');
+      setTimeout(() => el.classList.add('hidden'), 350);
+    }, 3000);
+  }
+</script>
+</body>
+</html>
