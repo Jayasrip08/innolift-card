@@ -100,8 +100,8 @@
 
       <!-- Person -->
       <div class="person">
-        <h2 class="person-name">Praveen Kumar</h2>
-        <p class="person-title">Founder &amp; Managing Director</p>
+        <h2 class="person-name">Dr. R. Srivel</h2>
+        <p class="person-title">Founder</p>
       </div>
 
       <div class="divider"></div>
@@ -123,10 +123,10 @@
           <i class="fa-solid fa-chevron-right act-chevron"></i>
         </a>
 
-        <a href="mailto:contact@innoliftventures.com" class="act-btn" id="btnEmail">
+        <a href="mailto:innoliftventures@gmail.com" class="act-btn" id="btnEmail">
           <span class="act-icon"><i class="fa-solid fa-envelope"></i></span>
           <span class="act-label">Email</span>
-          <span class="act-meta">contact@innoliftventures.com</span>
+          <span class="act-meta">innoliftventures@gmail.com</span>
           <i class="fa-solid fa-chevron-right act-chevron"></i>
         </a>
 
@@ -193,10 +193,10 @@
   })();
 
   function saveContact() {
-    const v = `BEGIN:VCARD\nVERSION:3.0\nN:Kumar;Praveen;;;\nFN:Praveen Kumar\nORG:InnoLift Ventures\nTITLE:Founder & Managing Director\nTEL;TYPE=CELL:+919876543210\nEMAIL:contact@innoliftventures.com\nURL:https://innoliftventures.com\nNOTE:DPIIT Recognised Startup · Chennai & Erode, India\nEND:VCARD`;
+    const v = `BEGIN:VCARD\nVERSION:3.0\nN:Srivel;R;;Dr.;\nFN:Dr. R. Srivel\nORG:InnoLift Ventures\nTITLE:Founder\nTEL;TYPE=CELL:+919876543210\nEMAIL:innoliftventures@gmail.com\nURL:https://innoliftventures.com\nNOTE:DPIIT Recognised Startup · Chennai & Erode, India\nEND:VCARD`;
     const a = document.createElement('a');
     a.href = URL.createObjectURL(new Blob([v], {type:'text/vcard'}));
-    a.download = 'Praveen_Kumar_InnoLift.vcf';
+    a.download = 'Dr_R_Srivel_InnoLift.vcf';
     a.click();
     showToast('Contact saved to your device!');
   }
