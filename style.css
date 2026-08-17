@@ -99,7 +99,7 @@ body {
   margin-bottom: 18px;
 }
 
-/* Spinning gradient border ring */
+/* Static gradient border ring */
 .logo-ring {
   width: 100px;
   height: 100px;
@@ -115,11 +115,6 @@ body {
     #FF7A00 360deg
   );
   box-shadow: 0 0 0 3px var(--navy), 0 8px 24px rgba(0,0,0,0.5), 0 0 20px rgba(255,122,0,0.2);
-  animation: ringSpinSlow 10s linear infinite;
-}
-@keyframes ringSpinSlow {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
 }
 
 .logo-inner {
@@ -133,13 +128,14 @@ body {
   overflow: hidden;
 }
 
-/* Rocket SVG — subtle float */
-.rocket-svg {
-  width: 62%;
-  height: 62%;
+/* Logo image — fills the ring */
+.logo-img {
+  width: 88%;
+  height: 88%;
   display: block;
+  object-fit: contain;
   animation: gentleFloat 4s ease-in-out infinite;
-  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.55));
 }
 @keyframes gentleFloat {
   0%, 100% { transform: translateY(0); }
@@ -174,6 +170,14 @@ body {
   color: var(--orange);
   letter-spacing: 5px;
 }
+.brand-pvt {
+  font-size: 0.58rem;
+  font-weight: 700;
+  color: rgba(203,213,225,0.45);
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
 
 /* ══════════════════════════════════════════════════
    WHITE FLOATING CARD
@@ -190,6 +194,36 @@ body {
 
 /* Person info */
 .person { text-align: center; margin-bottom: 14px; }
+
+/* Profile photo ring */
+.profile-ring-wrap {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.profile-ring {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  padding: 3px;
+  background: conic-gradient(
+    from 0deg,
+    #FF7A00 0deg,
+    #FFB060 60deg,
+    #CBD5E1 120deg,
+    #475569 180deg,
+    #CBD5E1 240deg,
+    #FF7A00 360deg
+  );
+  box-shadow: 0 0 0 2.5px #fff, 0 6px 18px rgba(255,122,0,0.22);
+}
+.profile-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
 .person-name  { font-size: 1.25rem; font-weight: 800; color: var(--navy); letter-spacing: -0.2px; margin-bottom: 2px; }
 .person-title { font-size: 0.78rem; font-weight: 600; color: var(--muted); }
 
@@ -198,6 +232,51 @@ body {
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--border) 30%, var(--border) 70%, transparent);
   margin-bottom: 12px;
+}
+
+/* ── Contact toggle button ───────────────────────── */
+.contact-toggle {
+  width: 100%;
+  padding: 10px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-pill);
+  background: var(--off-white);
+  font-family: var(--font);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--navy);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+.contact-toggle:hover {
+  border-color: var(--orange);
+  background: var(--white);
+  box-shadow: 0 4px 14px rgba(255,122,0,0.1);
+}
+.contact-toggle .toggle-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.contact-toggle.open .toggle-arrow { transform: rotate(180deg); }
+
+/* ── Collapsible contacts panel ──────────────────── */
+.contacts-panel {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+  margin-top: 0;
+}
+.contacts-panel.open {
+  max-height: 400px;
+  opacity: 1;
+  margin-top: 8px;
 }
 
 /* ── Action buttons ──────────────────────────────── */
@@ -237,7 +316,7 @@ body {
 .act-btn:hover .act-icon.green  { background: #16A34A;       color: var(--white); }
 
 .act-label   { font-size: 0.88rem; font-weight: 700; color: var(--navy); flex: 1; }
-.act-meta    { font-size: 0.65rem; font-weight: 500; color: var(--muted); margin-right: 2px; max-width: 110px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.act-meta    { display: none; }
 .act-chevron { color: var(--border); font-size: 0.65rem; transition: color 0.2s, transform 0.2s; }
 .act-btn:hover .act-chevron { color: var(--orange); transform: translateX(2px); }
 
